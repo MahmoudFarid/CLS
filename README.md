@@ -19,11 +19,19 @@ Each Request/Reply is paired and has to be successful.
 
 # Run
 -----
-First run server that will open sockets with all urls in file
+our senario that implemented:
+-----------------------------
+We assume that we have two urls that will open socket with it: "tcp://127.0.0.1:5555", "tcp://127.0.0.1:5556",
+we can increase it by any number of urls
+* run server that will open sockets with all urls in file
 
     pyhton Locking/run_server.py
-    
-Second run client that will send requests to any url to access any resource on it
+
+we are sending 5 requests, first one to use 'file1' resource on "tcp://127.0.0.1:5555", this is the first request then
+it can use this resource and this resource will lock for constant time.
+second request to use 'file1' resource on "tcp://127.0.0.1:5555", will found this resource is locked on this url then
+it will be retry locking after constant time, if the resource is released then it will locked again to this process and so on...
+* run client that will send requests to any url to access any resource on it
 
     pythin Locking/run_client.py
 
