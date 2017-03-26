@@ -9,6 +9,7 @@ we consuming servers could be spread across more computers. To provide access to
 
 * socket zmq.REQ will block on send unless it has successfully received a reply back.
 * socket zmq.REP will block on recv unless it has received a request.
+
 Each Request/Reply is paired and has to be successful.
 ![alt tag](http://learning-0mq-with-pyzmq.readthedocs.io/en/latest/_images/reqrep.png)
 
