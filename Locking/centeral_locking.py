@@ -9,29 +9,6 @@ from utils import get_details_from_message
 
 logging.basicConfig(level=logging.DEBUG)
 
-# class Locker():
-
-#     def __init__(self, max_requests=1, in_seconds=1.0):
-#         self.max_requests = max_requests
-#         self.in_seconds = in_seconds
-#         self.requests = 0
-#         now = time.time()
-#         self.next_slot = now + in_seconds
-
-#     def __iter__(self):
-#         return self
-
-#     def next(self):
-#         now = time.time()
-#         if now > self.next_slot:
-#             self.requests = 0
-#             self.next_slot = now + self.in_seconds
-#         if self.requests < self.max_requests:
-#             self.requests += 1
-#             return True
-#         else:
-#             return False
-
 
 class CenteralLockerServer():
     """
