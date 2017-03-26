@@ -33,5 +33,5 @@ second request to use 'file1' resource on "tcp://127.0.0.1:5555", will found thi
 it will be retry locking after constant time, if the resource is released then it will locked again to this process and so on...
 * run client that will send requests to any url to access any resource on it
 
-      pythin Locking/run_client.py
+      python Locking/run_client.py
 
