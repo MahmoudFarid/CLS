@@ -25,7 +25,7 @@ We assume that we have two urls that will open socket with it: "tcp://127.0.0.1:
 we can increase it by any number of urls
 * run server that will open sockets with all urls in file
 
-      pyhton Locking/run_server.py
+      python Locking/run_server.py
 
 we are sending 5 requests, first one to use 'file1' resource on "tcp://127.0.0.1:5555", this is the first request then
 it can use this resource and this resource will lock for constant time.
